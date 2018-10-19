@@ -1,0 +1,146 @@
+---
+# https://github.com/troessner/reek/tree/v5.0.2/docs
+# https://github.com/troessner/reek/blob/v5.0.2/docs/defaults.reek.yml
+detectors:
+  # Depending on the case, it could be fine to have accessible state outside of the class.
+  Attribute:
+    enabled: false
+    exclude: []
+  BooleanParameter:
+    enabled: true
+    exclude: []
+  # Use class level instance variable instead of class variable
+  #   when the value should not be shared with subclasses.
+  # When the value should be shared with subclasses or no subclasses exist,
+  #   class variable is fine and easier to use and understand.
+  ClassVariable:
+    enabled: false
+    exclude: []
+  ControlParameter:
+    enabled: true
+    exclude: []
+  DataClump:
+    enabled: true
+    exclude: []
+    max_copies: 2
+    min_clump_size: 2
+  DuplicateMethodCall:
+    enabled: false
+    exclude: []
+    max_calls: 1
+    allow_calls: []
+  FeatureEnvy:
+    enabled: true
+    exclude: []
+  InstanceVariableAssumption:
+    enabled: false
+    exclude: []
+  # Already catch by rubocop.
+  IrresponsibleModule:
+    enabled: false
+    exclude: []
+  # Already catch by rubocop.
+  LongParameterList:
+    enabled: false
+    exclude: []
+    max_params: 3
+    overrides:
+      initialize:
+        max_params: 5
+  # Already catch by rubocop.
+  LongYieldList:
+    enabled: false
+    exclude: []
+    max_params: 3
+  ManualDispatch:
+    enabled: true
+    exclude: []
+  MissingSafeMethod:
+    enabled: true
+    exclude: []
+  ModuleInitialize:
+    enabled: true
+    exclude: []
+  NestedIterators:
+    enabled: true
+    exclude: []
+    max_allowed_nesting: 1
+    ignore_iterators:
+    - tap
+  # Too much use today and not only for SimulatedPolymorphism.
+  # We should start to always implement nil pattern before to enable this check.
+  NilCheck:
+    enabled: false
+    exclude: []
+  RepeatedConditional:
+    enabled: true
+    exclude: []
+    max_ifs: 2
+  SubclassedFromCoreClass:
+    enabled: true
+    exclude: []
+  # Already catch by rubocop.
+  TooManyConstants:
+    enabled: false
+    exclude: []
+    max_constants: 5
+  TooManyInstanceVariables:
+    enabled: false
+    exclude: []
+    max_instance_variables: 4
+  # Already catch by rubocop.
+  TooManyMethods:
+    enabled: false
+    exclude: []
+    max_methods: 15
+  # Already catch by rubocop.
+  TooManyStatements:
+    enabled: false
+    exclude:
+    - initialize
+    max_statements: 5
+  UncommunicativeMethodName:
+    enabled: true
+    exclude: []
+    reject:
+    - "/^[a-z]$/"
+    - "/[0-9]$/"
+    - "/[A-Z]/"
+    accept: []
+  UncommunicativeModuleName:
+    enabled: true
+    exclude: []
+    reject:
+    - "/^.$/"
+    - "/[0-9]$/"
+    accept:
+    - "/V[0-9]$/"
+  UncommunicativeParameterName:
+    enabled: true
+    exclude: []
+    reject:
+    - "/^.$/"
+    - "/[0-9]$/"
+    - "/[A-Z]/"
+    - "/^_/"
+    accept: []
+  UncommunicativeVariableName:
+    enabled: true
+    exclude: []
+    reject:
+    - "/^.$/"
+    - "/[0-9]$/"
+    - "/[A-Z]/"
+    accept:
+    - "/^_$/"
+  # Already catch by rubocop.
+  UnusedParameters:
+    enabled: false
+    exclude: []
+  UnusedPrivateMethod:
+    enabled: false
+    exclude: []
+  UtilityFunction:
+    enabled: true
+    exclude: []
+    public_methods_only: false
