@@ -94,7 +94,7 @@ Style/CollectionMethods:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style::NumericLiterals:
+Style/NumericLiterals:
   Enabled: false
 
 Style/GlobalVars:
