@@ -133,7 +133,8 @@ detectors:
     - "/[A-Z]/"
     accept:
     - "/^_$/"
-    - "/V[0-9]$/"
+    - "/V[0-9]beta[0-9]$/"
+    - "/V[0-9]alpha[0-9]$/"
   # Already catch by rubocop.
   UnusedParameters:
     enabled: false
