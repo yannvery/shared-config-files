@@ -119,6 +119,9 @@ Style/PercentLiteralDelimiters:
     '%w': '()'
     '%W': '()'
 
+Style/OneLineConditional:
+  Enabled: false
+
 Style/SignalException:
   Description: 'This cop checks for uses of fail and raise.'
   EnforcedStyle: only_raise
