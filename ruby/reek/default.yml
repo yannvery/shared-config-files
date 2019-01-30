@@ -114,7 +114,7 @@ detectors:
     - "/^.$/"
     - "/[0-9]$/"
     accept:
-    - "/V[0-9]$/"
+    - "/V[0-9]+((alpha|beta)[0-9]+)*$/"
   UncommunicativeParameterName:
     enabled: true
     exclude: []
