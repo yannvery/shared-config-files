@@ -82,6 +82,11 @@ Metrics/BlockLength:
     - config/routes.rb
     - config/initializers/secure_headers.rb
 
+# ===================================== Department Naming ==========================================
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: optional
+
 # ===================================== Department Style ===========================================
 
 Style/Alias:
