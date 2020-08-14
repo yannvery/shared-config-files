@@ -2,7 +2,7 @@
 #   https://github.com/bbatsov/rubocop/blob/master/manual/cops.md
 
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.5.3
 
 # ==================================== Department Bundler ==========================================
 
